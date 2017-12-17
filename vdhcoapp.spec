@@ -24,7 +24,7 @@ Group: Applications/Internet
 URL: https://github.com/mi-g/vdhcoapp
 Version: 1.1.0
 Release: 1%{?gver}%{?dist}
-License: MPLv2.0
+License: GPLv2
 Source0: https://github.com/mi-g/vdhcoapp/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
 Source1: vdhcoapp-snapshot
 Patch:   vdhcoapp.patch
