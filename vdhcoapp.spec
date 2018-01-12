@@ -102,7 +102,7 @@ install -Dm644 config.json %{buildroot}/%{_datadir}/vdhcoapp/config.json
 
 %changelog
 
-* Thu Jan 11 2017 David Vásquez <davidjeremias82 AT gmail DOT com> - 1.1.2-1
+* Thu Jan 11 2018 David Vásquez <davidjeremias82 AT gmail DOT com> - 1.1.2-1
 - Updated to 1.1.2-1
 
 * Mon Dec 18 2017 David Vásquez <davidjeremias82 AT gmail DOT com> - 1.1.1-1
