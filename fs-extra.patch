@@ -1,0 +1,11 @@
+--- a/package.json	2018-01-09 03:05:29.000000000 -0600
++++ b/package-new.json	2018-01-25 19:09:28.041525163 -0600
+@@ -22,7 +22,7 @@
+   },
+   "license": "GPL-2.0",
+   "devDependencies": {
+-    "fs-extra": "^4.0.1",
++    "fs-extra": "^4.0.2",
+     "gulp": "^3.9.1",
+     "gulp-clean": "^0.3.2",
+     "gulp-deb": "^0.2.1",

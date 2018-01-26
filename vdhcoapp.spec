@@ -9,7 +9,7 @@
 
 # Put here new versions of yarn
 #https://github.com/yarnpkg/yarn/releases
-%global y_ver 1.3.2
+%global y_ver 1.4.1
 
 # We need said to gulp our Machine
 %ifarch x86_64 
@@ -23,14 +23,16 @@ Summary: Companion application for Video DownloadHelper browser add-on
 Group: Applications/Internet
 URL: https://github.com/mi-g/vdhcoapp
 Version: 1.1.2
-Release: 1%{?gver}%{?dist}
+Release: 2%{?gver}%{?dist}
 License: GPLv2
 Source0: https://github.com/mi-g/vdhcoapp/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
 Source1: vdhcoapp-snapshot
 Patch:   vdhcoapp.patch
+Patch1:  fs-extra.patch
+Patch2:  nodefix.patch
 #-------------------------------------
 BuildRequires: git 
-BuildRequires: wget
+BuildRequires: wget 
 Requires: ffmpeg
 
 %description
@@ -41,12 +43,14 @@ Companion application for Video DownloadHelper browser add-on.
 %{S:1} -c %{commit0}
 %setup -T -D -n %{name}-%{shortcommit0} 
 %patch -p1
+%patch1 -p1
+%patch2 -p1
 
 %build
 
 # get yarn
 wget -c https://github.com/yarnpkg/yarn/releases/download/v%{y_ver}/yarn-v%{y_ver}.tar.gz
-tar xmzvf yarn-v1.3.2.tar.gz -C ~
+tar xmzvf yarn-v%{y_ver}.tar.gz -C ~
 
 # activate yarn
 echo "export PATH=$PATH:~/yarn-v%{y_ver}/bin/:~/yarn-v%{y_ver}/lib/" >> ~/.bashrc
@@ -60,13 +64,15 @@ git clone git://github.com/creationix/nvm.git ~/nvm
 echo "source ~/nvm/nvm.sh" >> ~/.bashrc
 
 source ~/.bashrc
-nvm install 7
-nvm use 7
+nvm install 8.0.0
+nvm use 8.0.0
 
 # Begin the build
 XCFLAGS="-g -O2 -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2" XLDFLAGS="-Wl,-z,relro"
 
 ~/yarn-v%{y_ver}/bin/yarn install
+#~/yarn-v%{y_ver}/bin/yarn add brunch
+#npm install
 
 # Our Firefox multilib path
 %ifarch x86_64 
@@ -101,6 +107,9 @@ install -Dm644 config.json %{buildroot}/%{_datadir}/vdhcoapp/config.json
 %{_datadir}/%{name}/config.json
 
 %changelog
+
+* Thu Jan 25 2018 David Vásquez <davidjeremias82 AT gmail DOT com> - 1.1.2-2
+- Rebuilt for Firefox
 
 * Thu Jan 11 2018 David Vásquez <davidjeremias82 AT gmail DOT com> - 1.1.2-1
 - Updated to 1.1.2-1
