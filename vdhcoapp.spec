@@ -104,8 +104,6 @@ fi
 %post
 /usr/bin/vdhcoapp install --system
 
-%preun
-/usr/bin/vdhcoapp uninstall --system
 
 %files
 %defattr(755, root, root)
