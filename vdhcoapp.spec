@@ -42,7 +42,7 @@ Companion application for Video DownloadHelper browser add-on.
 
 %{S:1} -c %{commit0}
 %setup -T -D -n %{name}-%{shortcommit0} 
-%patch -p1
+%patch -p2
 %patch1 -p1
 %patch2 -p1
 
