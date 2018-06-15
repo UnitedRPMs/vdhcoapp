@@ -1,5 +1,5 @@
---- a/converter.js	2018-06-13 07:58:51.000000000 -0600
-+++ b/converter-new.js	2018-06-15 01:03:03.404182255 -0600
+--- a/app/converter.js	2018-06-13 07:58:51.000000000 -0600
++++ b/app/converter-new.js	2018-06-15 01:03:03.404182255 -0600
 @@ -44,7 +44,7 @@
  else
  	throw new Error("Unsupported architecture",process.arch);
@@ -10,8 +10,8 @@
  const probeBinaryPath = path.join(binaryDir,"ffprobe");
  const playBinaryPath = path.join(binaryDir,"ffplay");
 
---- a/native-autoinstall.js	2018-06-13 07:58:51.000000000 -0600
-+++ b/native-autoinstall-new.js	2018-06-15 01:08:45.734576023 -0600
+--- a/app/native-autoinstall.js	2018-06-13 07:58:51.000000000 -0600
++++ b/app/native-autoinstall-new.js	2018-06-15 01:08:45.734576023 -0600
 @@ -72,7 +72,10 @@
  		mode = "system";
  	var config;
