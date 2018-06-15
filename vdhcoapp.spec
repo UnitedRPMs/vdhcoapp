@@ -39,12 +39,7 @@ Requires: ffmpeg
 Companion application for Video DownloadHelper browser add-on.
 
 %prep
-
-%{S:1} -c %{commit0}
-%setup -T -D -n %{name}-%{shortcommit0} 
-%patch -p1
-%patch1 -p1
-%patch2 -p1
+%autosetup -n %{name}-%{commit0} -p1
 
 %build
 
