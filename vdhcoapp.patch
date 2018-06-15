@@ -1,6 +1,5 @@
-diff -ruN orig/app/converter.js new/app/converter.js
---- a/app/converter.js	2018-06-13 07:58:51.000000000 -0600
-+++ b/app/converter.js	2018-06-15 00:07:09.832896870 -0600
+--- a/converter.js	2018-06-13 07:58:51.000000000 -0600
++++ b/converter-new.js	2018-06-15 01:03:03.404182255 -0600
 @@ -44,7 +44,7 @@
  else
  	throw new Error("Unsupported architecture",process.arch);
@@ -10,9 +9,9 @@ diff -ruN orig/app/converter.js new/app/converter.js
  const binaryPath = path.join(binaryDir,"ffmpeg");
  const probeBinaryPath = path.join(binaryDir,"ffprobe");
  const playBinaryPath = path.join(binaryDir,"ffplay");
-diff -ruN orig/app/native-autoinstall.js new/app/native-autoinstall.js
---- orig/app/native-autoinstall.js	2018-06-13 07:58:51.000000000 -0600
-+++ new/app/native-autoinstall.js	2018-06-15 00:10:04.746634249 -0600
+
+--- a/native-autoinstall.js	2018-06-13 07:58:51.000000000 -0600
++++ b/native-autoinstall-new.js	2018-06-15 01:08:45.734576023 -0600
 @@ -72,7 +72,10 @@
  		mode = "system";
  	var config;
