@@ -3,5 +3,7 @@ BUILDROOT/*
 RPMS/*
 SPECS/*
 SRPMS/*
+new/*
+orig/*
 vdhcoapp*.tar.gz
 .directory
