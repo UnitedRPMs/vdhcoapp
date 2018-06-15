@@ -26,7 +26,6 @@ Version: 1.2.3
 Release: 1%{?gver}%{?dist}
 License: GPLv2
 Source0: https://github.com/mi-g/vdhcoapp/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
-Source1: vdhcoapp-snapshot
 Patch:   vdhcoapp.patch
 Patch1:  fs-extra.patch
 Patch2:  nodefix.patch
