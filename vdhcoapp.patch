@@ -1,6 +1,6 @@
 diff -ruN orig/app/converter.js new/app/converter.js
---- orig/app/converter.js	2018-06-13 07:58:51.000000000 -0600
-+++ new/app/converter.js	2018-06-15 00:07:09.832896870 -0600
+--- a/app/converter.js	2018-06-13 07:58:51.000000000 -0600
++++ b/app/converter.js	2018-06-15 00:07:09.832896870 -0600
 @@ -44,7 +44,7 @@
  else
  	throw new Error("Unsupported architecture",process.arch);
