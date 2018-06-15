@@ -70,7 +70,7 @@ XCFLAGS="-g -O2 -fstack-protector-strong -Wformat -Werror=format-security -D_FOR
 %ifarch x86_64 
 sed -i 's|/usr/lib|/usr/lib64|g' gulpfile.js
 sed -i 's|/usr/lib|/usr/lib64|g' app/native-autoinstall.js
-sed -i 's|/usr/lib|/usr/lib64|g' assets/setup-linux-system.sh.ejs
+sed -i 's|lib/x86_64-linux-gnu|lib64|g' converter/build-apps.sh
 %endif
 
 # We need said a npm/yarn the path of binaries already installed... 
