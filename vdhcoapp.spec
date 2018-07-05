@@ -3,7 +3,7 @@
 %global debug_package %{nil}
 %global __os_install_post /usr/lib/rpm/brp-compress %{nil}
 
-%global commit0 661e06aa4afc16ae442d746eb55cd778583ebc2a
+%global commit0 9cd80fd65f6ad1b21fef8bc28588d0a0ae97ae16
 %global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
 %global gver .git%{shortcommit0}
 
@@ -22,8 +22,8 @@ Name: vdhcoapp
 Summary: Companion application for Video DownloadHelper browser add-on 
 Group: Applications/Internet
 URL: https://github.com/mi-g/vdhcoapp
-Version: 1.2.3
-Release: 1%{?gver}%{?dist}
+Version: 1.2.4
+Release: 1%{?dist}
 License: GPLv2
 Source0: https://github.com/mi-g/vdhcoapp/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
 Patch:   vdhcoapp.patch
@@ -104,6 +104,9 @@ fi
 %{_datadir}/%{name}/config.json
 
 %changelog
+
+* Wed Jul 04 2018 David Va <davidva AT tuta DOT io> - 1.2.4-1
+- Updated to 1.2.4
 
 * Thu Jun 14 2018 David Va <davidva AT tuta DOT io> - 1.2.3-1
 - Updated to 1.2.3
