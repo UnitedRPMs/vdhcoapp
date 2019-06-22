@@ -1,4 +1,6 @@
 %global debug_package %{nil}
+# workaround debug-id conflicts (with fx_cast)
+%global _build_id_links none
 %global __os_install_post /usr/lib/rpm/brp-compress %{nil}
 %global __provides_exclude_from %{_datadir}/%{name}
 %global __requires_exclude_from %{_datadir}/%{name}
