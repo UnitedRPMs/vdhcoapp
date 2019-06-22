@@ -1,5 +1,3 @@
-%{?nodejs_find_provides_and_requires}
-%global _enable_debug_package 0
 %global debug_package %{nil}
 %global __os_install_post /usr/lib/rpm/brp-compress %{nil}
 %global __provides_exclude_from %{_datadir}/%{name}
@@ -25,7 +23,7 @@ Summary: Companion application for Video DownloadHelper browser add-on
 Group: Applications/Internet
 URL: https://github.com/mi-g/vdhcoapp
 Version: 1.3.0
-Release: 1%{?dist}
+Release: 2%{?dist}
 License: GPLv2
 Source0: https://github.com/mi-g/vdhcoapp/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
 Patch:   vdhcoapp.patch
@@ -106,6 +104,9 @@ fi
 %{_datadir}/%{name}/config.json
 
 %changelog
+
+* Fri Jun 21 2019 David Va <davidva AT tuta DOT io> - 1.3.0-2
+- Updated to current commit
 
 * Thu Jun 20 2019 David Va <davidva AT tuta DOT io> - 1.3.0-1
 - Updated to 1.3.0
