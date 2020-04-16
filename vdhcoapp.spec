@@ -5,7 +5,7 @@
 %global __provides_exclude_from %{_datadir}/%{name}
 %global __requires_exclude_from %{_datadir}/%{name}
 
-%global commit0 bf7f4ad13566939a2e54e717fbc512765dafc2eb
+%global commit0 9a92075232025aaa940e7ea8f40faec9fea1bf1e
 %global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
 %global gver .git%{shortcommit0}
 
@@ -24,7 +24,7 @@ Name: vdhcoapp
 Summary: Companion application for Video DownloadHelper browser add-on 
 Group: Applications/Internet
 URL: https://github.com/mi-g/vdhcoapp
-Version: 1.4.0
+Version: 1.5.0
 Release: 2%{?dist}
 License: GPLv2
 Source0: https://github.com/mi-g/vdhcoapp/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
@@ -106,6 +106,9 @@ fi
 %{_datadir}/%{name}/config.json
 
 %changelog
+
+* Wed Apr 15 2020 David Va <davidva AT tuta DOT io> - 1.5.0-2
+- Updated to 1.5.0
 
 * Wed Mar 11 2020 David Va <davidva AT tuta DOT io> - 1.4.0-2
 - Updated to 1.4.0
